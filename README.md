@@ -1,21 +1,12 @@
-# 📦 Blockchain Assignment - IPFS (InterPlanetary File System)
+# IPFS Blockchain Assignment
 
-## 🧑‍🎓 Submitted By
-**Name:** Lucky Longre  
-**Course:** B.Voc in Software Development  
-**Subject:** Introduction to Blockchain  
-**Assignment:** Uploading Files to IPFS using WSL Ubuntu
+This assignment demonstrates how to install IPFS, run the daemon, upload a file, retrieve its CID, and push it to a GitHub repository using WSL (Windows Subsystem for Linux).
 
----
+## Steps Performed ✅
 
-## 📌 Objective
-To install IPFS (InterPlanetary File System) in a local Ubuntu environment (via WSL), upload files to the decentralized IPFS network, generate a unique CID (Content Identifier), and share it for verification.
+### 1. IPFS Installation
+Installed Kubo (IPFS) version 0.32.1 using `wget` and extracted the contents.
 
----
-
-## 🚀 Steps Performed
-
-### ✅ Step 1: Download & Extract IPFS (Kubo)
 ```bash
 wget https://dist.ipfs.tech/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
 tar -xvzf kubo_v0.32.1_linux-amd64.tar.gz
@@ -23,56 +14,99 @@ cd kubo
 sudo bash install.sh
 ```
 
-### ✅ Step 2: Initialize & Start IPFS
+📸 **Screenshot:** Successfully installed IPFS and verified version using `ipfs --version`
+
+![IPFS Installation](./images/ipfs-install.png)
+
+---
+
+### 2. IPFS Initialization
+Initialized IPFS and generated the peer identity.
+
 ```bash
 ipfs init
+```
+
+📸 **Screenshot:** Output showing the Peer identity and repository initialized.
+
+![IPFS Init](./images/ipfs-init.png)
+
+---
+
+### 3. Running the IPFS Daemon
+Started the IPFS daemon to initialize the node.
+
+```bash
 ipfs daemon
 ```
 
-### ✅ Step 3: Add File to IPFS
-I created a simple `hello.txt` file and uploaded it to IPFS using:
+📸 **Screenshot:** Daemon started successfully with WebUI and Gateway URLs displayed.
+
+![IPFS Daemon](./images/daemon-start.png)
+
+---
+
+### 4. Uploading a File to IPFS
+Created a `hello.txt` file and added it to IPFS to get its unique content identifier (CID).
+
 ```bash
+echo "Hello from Lucky!" > hello.txt
 ipfs add hello.txt
 ```
 
-### 📅 CID Generated:
+📸 **Screenshot:** `hello.txt` added and CID shown in terminal.
+
+![File Upload](./images/ipfs-add-cid.png)
+
+---
+
+### 5. Creating CID File
+Saved the CID from the previous step to a new file named `ipfs_cid.txt`.
+
+```bash
+echo "QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN" > ipfs_cid.txt
 ```
-QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN
+
+📸 **Screenshot:** Created the `ipfs_cid.txt` file with the CID.
+
+![CID File](./images/cid-file.png)
+
+---
+
+### 6. Git Configuration and GitHub Repository Setup
+Initialized Git, configured identity, committed files, added remote, and pushed to GitHub.
+
+```bash
+git init
+git config --global user.name "Lucky Longre"
+git config --global user.email "sem1luckylongre@gmail.com"
+git add .
+git commit -m "Added IPFS CID file for Blockchain assignment"
+git branch -M main
+git remote add origin https://github.com/Sem1-LuckyLongre/blockchain-assignments.git
+git push -u origin main
 ```
 
-### 🌐 File Access Link:
-[https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN](https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN)
+📸 **Screenshot:** Commit and push to GitHub completed successfully.
+
+![GitHub Push](./images/github-push.png)
 
 ---
 
-## 🖼️ Screenshots
+### 7. GitHub Repository View
+Viewed the pushed files on the GitHub repository page.
 
-### 1. IPFS Installation on Ubuntu (WSL)
-![IPFS Installation](images/ipfs-installation.png)
+📸 **Screenshot:** Repository showing `hello.txt` and `ipfs_cid.txt`.
 
-### 2. IPFS Daemon Running
-![Daemon Running](images/ipfs-daemon.png)
-
-### 3. Adding File to IPFS and Getting CID
-![CID Generated](images/ipfs-cid.png)
+![GitHub Repo](./images/github-repo.png)
 
 ---
 
-## 🧠 What I Learned
+## Conclusion ✅
+Successfully installed and ran IPFS, uploaded a file, retrieved its CID, and pushed it to GitHub via WSL.
 
-- How to install and use IPFS locally
-- The concept of decentralized file storage
-- How files are stored and retrieved via CID
-- Pushing files to GitHub using Git and Personal Access Token
+GitHub Repository 📂: [blockchain-assignments](https://github.com/Sem1-LuckyLongre/blockchain-assignments)
 
----
+Check your file directly on the IPFS Gateway:
 
-## 📁 GitHub Repository
-
-🔗 [https://github.com/Sem1-LuckyLongre/blockchain-assignments](https://github.com/Sem1-LuckyLongre/blockchain-assignments)
-
----
-
-## ✅ Conclusion
-
-This assignment helped me understand the power of decentralized storage through IPFS. I successfully uploaded a file, got the CID, and shared it via GitHub for academic review.
+🔗 [https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN](https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN)
