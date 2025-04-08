@@ -17,6 +17,7 @@ sudo bash install.sh
 📸 **Screenshot:** Successfully installed IPFS and verified version using `ipfs --version`
 
 ![IPFS Installation](./images/ipfs-install.png)
+![IPFS Version](./images/ipfs-version.png)
 
 ---
 
