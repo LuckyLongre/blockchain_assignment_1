@@ -105,7 +105,7 @@ Viewed the pushed files on the GitHub repository page.
 ## Conclusion ✅
 Successfully installed and ran IPFS, uploaded a file, retrieved its CID, and pushed it to GitHub via WSL.
 
-GitHub Repository 📂: [blockchain-assignments](https://github.com/Sem1-LuckyLongre/blockchain-assignments)
+GitHub Repository 📂: [blockchain-assignments](https://github.com/Sem1-LuckyLongre/blockchain_assignment_1)
 
 Check your file directly on the IPFS Gateway:
 
