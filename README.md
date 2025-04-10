@@ -65,7 +65,7 @@ ipfs add hello.txt
 Saved the CID from the previous step to a new file named `ipfs_cid.txt`.
 
 ```bash
-echo "QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN" > ipfs_cid.txt
+echo "QmbLWQTZZspap5tE5G4taxuRhqFJayDtge58cPFEvYFi1n" > ipfs_cid.txt
 ```
 
 📸 **Screenshot:** Created the `ipfs_cid.txt` file with the CID.
@@ -110,4 +110,4 @@ GitHub Repository 📂: [blockchain-assignments](https://github.com/Sem2-LuckyLo
 
 Check your file directly on the IPFS Gateway:
 
-🔗 [https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN](https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN)
+🔗 [https://ipfs.io/ipfs/QmRmU6fULi6BgXjw4j8TU7tZyNdn6w2EMbqQE2cWNH5RZN](https://ipfs.io/ipfs/QmbLWQTZZspap5tE5G4taxuRhqFJayDtge58cPFEvYFi1n)
